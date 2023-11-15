@@ -2,7 +2,9 @@ import Category from '../models/Category.js';
 
 
 const createBook = async (req, res) => {
-   const book  = req.body;
+
+    const book = req.body;
+
     try {
         const category = new Category(book);
         const savedCategories = await category.save();
